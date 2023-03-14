@@ -1,0 +1,176 @@
+{
+  "Food": [
+    {
+      "Name": "Apple",
+      "Unit Cost (EUR/g)": 0.0015,
+      "Unit Portion (g)": 182.0,
+      "Calories (kcal)": 52.0,
+      "Fat (g)": 0.2,
+      "Carbohydrates (g)": 14.0,
+      "Protein (g)": 0.3,
+      "Calcium (mg)": 7.0,
+      "Potassium (mg)": 107.0,
+      "Vitamin A (mg)": 3.0,
+      "Vitamin B6 (mg)": 0.041
+    },
+    {
+      "Name": "Chicken Breast",
+      "Unit Cost (EUR/g)": 0.0331,
+      "Unit Portion (g)": 100.0,
+      "Calories (kcal)": 165.0,
+      "Fat (g)": 3.6,
+      "Carbohydrates (g)": 0.0,
+      "Protein (g)": 31.0,
+      "Calcium (mg)": 8.0,
+      "Potassium (mg)": 230.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.62
+    },
+    {
+      "Name": "Salmon",
+      "Unit Cost (EUR/g)": 0.0222,
+      "Unit Portion (g)": 100.0,
+      "Calories (kcal)": 208.0,
+      "Fat (g)": 13.0,
+      "Carbohydrates (g)": 0.0,
+      "Protein (g)": 20.0,
+      "Calcium (mg)": 12.0,
+      "Potassium (mg)": 204.0,
+      "Vitamin A (mg)": 9.0,
+      "Vitamin B6 (mg)": 0.615
+    },
+    {
+      "Name": "Quinoa",
+      "Unit Cost (EUR/g)": 0.0059,
+      "Unit Portion (g)": 185.0,
+      "Calories (kcal)": 120.0,
+      "Fat (g)": 1.9,
+      "Carbohydrates (g)": 21.3,
+      "Protein (g)": 4.0,
+      "Calcium (mg)": 31.0,
+      "Potassium (mg)": 281.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.193
+    },
+    {
+      "Name": "Brown Rice",
+      "Unit Cost (EUR/g)": 0.0008,
+      "Unit Portion (g)": 195.0,
+      "Calories (kcal)": 111.0,
+      "Fat (g)": 0.9,
+      "Carbohydrates (g)": 23.2,
+      "Protein (g)": 2.6,
+      "Calcium (mg)": 10.0,
+      "Potassium (mg)": 150.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.138
+    },
+    {
+      "Name": "Avocado",
+      "Unit Cost (EUR/g)": 0.0055,
+      "Unit Portion (g)": 136.0,
+      "Calories (kcal)": 160.0,
+      "Fat (g)": 14.7,
+      "Carbohydrates (g)": 8.5,
+      "Protein (g)": 2.0,
+      "Calcium (mg)": 12.0,
+      "Potassium (mg)": 487.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.257
+    },
+    {
+      "Name": "Broccoli",
+      "Unit Cost (EUR/g)": 0.0219,
+      "Unit Portion (g)": 91.0,
+      "Calories (kcal)": 34.0,
+      "Fat (g)": 0.4,
+      "Carbohydrates (g)": 6.6,
+      "Protein (g)": 2.8,
+      "Calcium (mg)": 47.0,
+      "Potassium (mg)": 316.0,
+      "Vitamin A (mg)": 567.0,
+      "Vitamin B6 (mg)": 0.175
+    },
+    {
+      "Name": "Black Beans",
+      "Unit Cost (EUR/g)": 0.0012,
+      "Unit Portion (g)": 172.0,
+      "Calories (kcal)": 132.0,
+      "Fat (g)": 0.9,
+      "Carbohydrates (g)": 23.6,
+      "Protein (g)": 9.0,
+      "Calcium (mg)": 71.0,
+      "Potassium (mg)": 739.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.32
+    },
+    {
+      "Name": "Greek Yogurt",
+      "Unit Cost (EUR/g)": 0.0066,
+      "Unit Portion (g)": 170.0,
+      "Calories (kcal)": 59.0,
+      "Fat (g)": 0.4,
+      "Carbohydrates (g)": 3.6,
+      "Protein (g)": 10.0,
+      "Calcium (mg)": 179.0,
+      "Potassium (mg)": 141.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.059
+    },
+    {
+      "Name": "Dark Chocolate",
+      "Unit Cost (EUR/g)": 0.0278,
+      "Unit Portion (g)": 40.0,
+      "Calories (kcal)": 604.0,
+      "Fat (g)": 43.1,
+      "Carbohydrates (g)": 46.2,
+      "Protein (g)": 7.9,
+      "Calcium (mg)": 64.0,
+      "Potassium (mg)": 376.0,
+      "Vitamin A (mg)": 0.0,
+      "Vitamin B6 (mg)": 0.077
+    }
+  ],
+  "Nutrients": [
+    {
+      "Name": "Calories (kcal)",
+      "Minimum": 400.0,
+      "Maximum": 3000.0
+    },
+    {
+      "Name": "Fat (g)",
+      "Minimum": 10.0,
+      "Maximum": 50.0
+    },
+    {
+      "Name": "Carbohydrates (g)",
+      "Minimum": 25.0,
+      "Maximum": 325.0
+    },
+    {
+      "Name": "Protein (g)",
+      "Minimum": 10.0,
+      "Maximum": 150.0
+    },
+    {
+      "Name": "Calcium (mg)",
+      "Minimum": 125.0,
+      "Maximum": 1200.0
+    },
+    {
+      "Name": "Potassium (mg)",
+      "Minimum": 205.0,
+      "Maximum": 3000.0
+    },
+    {
+      "Name": "Vitamin A (mg)",
+      "Minimum": 300.0,
+      "Maximum": 900.0
+    },
+    {
+      "Name": "Vitamin B6 (mg)",
+      "Minimum": 0.5,
+      "Maximum": 2.0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+model diet_problem
+set N = load_nutrients();
+set F = load_food();
+const U = load_nutrient_max(), forall i in N;
+const L = load_nutrient_min(), forall i in N;
+const c = load_food_cost(), forall j in F;
+const p = load_food_portion(), forall j in F;
+const v = load_food_nutrients(), forall i in N, forall j in F;
+int 0 <= x <= 100000, forall j in F;
+min sum_{j in F}{ c_{j}*p_{j}*x_{j} };
+constr sum_{j in F}{ v_{i,j}*x_{j} } <= U_{i}, forall i in N;
+constr sum_{j in F}{ v_{i,j}*x_{j} } >= L_{i}, forall i in N;
+end
+
+import elytica
+import json
+
+with open('diet_problem.json', 'r') as f:
+  data = json.load(f)
+    
+def load_nutrients():
+  return [id for id, row in enumerate(data["Nutrients"])]
+
+def load_nutrient_max():
+  return {id : row["Maximum"] for id, row in enumerate(data["Nutrients"])}
+
+def load_nutrient_min():
+  return {id : row["Minimum"] for id, row in enumerate(data["Nutrients"])}
+
+def load_food():
+  return [id for id, row in enumerate(data["Food"])]
+
+def load_food_cost():
+  return {row: col["Unit Cost (EUR/g)"] for row, col in enumerate(data["Food"])}
+
+def load_food_portion():
+  return {row: col["Unit Portion (g)"] for row, col in enumerate(data["Food"])}
+
+def load_food_nutrients():
+  nutrient_ids = [id for id, row in enumerate(data["Nutrients"])]
+  nutrient_name = {id : row["Name"] for id, row in enumerate(data["Nutrients"])}
+  return {i: {row: col[nutrient_name[i]] for row, col in enumerate(data["Food"])} for i in nutrient_ids}
+
+def main():      
+  elytica.init_model("diet_problem")
+  status = elytica.run_model("diet_problem")      
+  if status == "FEASIBLE" or status == "OPTIMAL":
+    print("Solution")            
+    food_name = {id : row["Name"] for id, row in enumerate(data["Food"])}
+    solution = []
+    F = elytica.get_model_set("diet_problem", "F")    
+    for j in F:
+      val = elytica.get_variable_value("diet_problem", f"x{j}")
+      if val > 0 :
+        row = {}
+        row["Food"] = food_name[j]
+        row["Portions"] = val
+        solution.append(row)                   
+    result={'Diet': solution }
+    elytica.write_results(json.dumps(result))             
+  else:
+    print("No feasible solution")  
+  return 0
+

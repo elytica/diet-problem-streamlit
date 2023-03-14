@@ -1,0 +1,3 @@
+elytica-dss
+pandas
+streamlit
